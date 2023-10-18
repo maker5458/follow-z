@@ -38,13 +38,13 @@ pkg install git
 ```
 ####seventh command
 ```
-git clone https://github.com/EVArthur/Evil-followers
+git clone https://github.com/maker5458/follow-z
 ```
 ####eights command
 ```
-cd Evil-followers
+cd follow-z
 ```
 ####nines command
 ```
-python Evil-followers.py
+python folower.py
 ```
