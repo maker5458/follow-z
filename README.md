@@ -46,5 +46,5 @@ cd follow-z
 ```
 ####nines command
 ```
-python folower.py
+python folowers.py
 ```
