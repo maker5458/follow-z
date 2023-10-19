@@ -48,3 +48,4 @@ cd follow-z
 ```
 python folowers.py
 ```
+Screenshot 2023-10-19 163625.png
