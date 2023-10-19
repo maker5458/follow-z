@@ -48,4 +48,5 @@ cd follow-z
 ```
 python folowers.py
 ```
-Screenshot 2023-10-19 163625.png
+![Screenshot 2023-10-19 163625](https://github.com/maker5458/follow-z/assets/142690894/1fb129bf-bd81-4eea-8690-328834ddd9d1)
+
